@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>st97rb0y</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+         body {
+        background-image: url('redmar.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;  /* Prevent background image from repeating */
+        background-attachment: fixed;  /* Create a parallax effect */
+        color: #fff;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+
+        .navbar {
+            background-color: transparent;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .navbar:hover {
+            background-color: #333;
+        }
+
+        .navbar-brand {
+            color: #8B0000;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: color 0.5s ease-in-out;
+        }
+
+        .navbar:hover .navbar-brand {
+            color: #FF0000;
+        }
+
+        .offcanvas-header {
+            color: #fff;
+        }
+
+        /* Existing styles ... */
+
+/* Existing styles ... */
+
+/* Existing styles ... */
+
+/* Existing styles ... */
+
+/* Existing styles ... */
+/* Existing styles ... */
+
+/* Existing styles ... */
+
+/* Existing styles ... */
+
+/* Existing styles ... */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fireEffect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Existing styles ... */
+
+.super-cool-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw; /* Use viewport width as a relative unit for font size */
+    font-weight: bold;
+    text-align: center;
+    color: transparent; /* Set text color to transparent */
+    background-image: linear-gradient(45deg, white, whitesmoke); /* Gradient colors for fire effect */
+    background-size: 200% 100%; /* Set background size */
+    background-clip: text; /* Use text as background clip */
+    -webkit-background-clip: text; /* For Safari */
+    animation: fadeIn 2s ease-in-out forwards, fireEffect 3s ease-in-out infinite alternate; /* Added fire effect animation */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .super-cool-text {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        width: 90%; /* Adjust width for better visibility */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+    }
+}
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+
+.super-cool-text::after {
+    content: "|"; /* Cursor symbol */
+    display: inline-block;
+    width: 20px; /* Adjust cursor width */
+    animation: cursorBlink 1s infinite;
+    color: #FF0000;
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Apply typing effect and fade-in */
+.super-cool-text.active {
+    animation: fadeIn 2s ease-in-out forwards, typingEffect 4s steps(20) 1s forwards;
+}
+
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="text.html">st97rb0y</a>
+            <a class="navbar-brand" href="https://www.linkedin.com/in/enumula-rahul-sai-80603a230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> <img src="link-removebg-preview.png" width="20px" height="20px"></a>
+            <a class="navbar-brand" href="https://x.com/Rahul57141895?t=_aPwEJOHw1JCBmhfHcPs7g&s=08"> <img src="twitter-removebg-preview.png" width="20px" height="20px"></a>
+            <a class="navbar-brand" href="http://discordapp.com/users/1191105624034005042"> <img src="discord-removebg-preview.png" width="30px" height="30px"></a>
+            <a class="navbar-brand" href="https://devfolio.co/@Rahul_turing"> <img src="dev-removebg-preview.png" width="30px" height="30px"></a>
+            <a class="navbar-brand" href="https://github.com/Rahul-star-ceo"> <img src="gi2-removebg-preview.png" width="20px" height="20px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="writeups.html">Write-ups</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Super Cool Text on Background Image -->
+    <div class="super-cool-text">Welcome to st97rb0y Blog</div>
+
+    <!-- Previous markup -->
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-label="Segment one" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar bg-success" role="progressbar" aria-label="Segment two" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar bg-info" role="progressbar" aria-label="Segment three" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <!-- New markup -->
+    <div class="progress-stacked">
+        <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+            <div class="progress-bar bg-success"></div>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+            <div class="progress-bar bg-info"></div>
+        </div>
+    </div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
