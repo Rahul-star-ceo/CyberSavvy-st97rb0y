@@ -1,0 +1,208 @@
+<!-- Existing HTML code -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CTF Write-ups Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #000;
+        }
+
+        .btn-danger {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .btn-danger:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+
+        .card {
+            background-color: #222;
+            border: 1px solid #d9534f;
+            color: #fff;
+        }
+
+        .card-header {
+            background-color: #d9534f;
+            border-bottom: 1px solid #d9534f;
+            color: #fff;
+        }
+
+        .card-body {
+            color: #fff;
+        }
+
+        .latest-writeup {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .home-button {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+            color: #fff;
+        }
+
+        .home-button:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+
+        .code-container {
+            background-color: #1e1e1e;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .code {
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            margin: 0;
+        }
+
+        .img-fluid {
+            max-width:fit-content;
+            height:auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Blog Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <!-- Home Back Button -->
+                <a href="index.html" class="btn btn-danger home-button mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path
+                            d="M0 0v16h16V0H0zm12 7.154V14H4v-6.846l-.512-.513 7.143-7.142 7.142 7.142-.513.513z" />
+                    </svg>
+                    Home
+                </a>
+
+                <a href="allwriteups.html" class="btn btn-danger web-exploitation-button mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-pen" viewBox="0 0 16 16">
+                        <path
+                            d="M0 2.632V0h2.632l9.055 9.055-2.632 2.632L0 2.632zm3.536 0L12.12 11.22l1.414-1.414L4.95 1.218H3.536zM1.718.3c-.372-.373-.98-.373-1.353 0l-.354.354c-.372.372-.372.98 0 1.353L.3 2.07l1.768-1.768-.35-.352zM15.437 12.48l-3.536-3.536-1.415 1.414 3.536 3.536 1.415-1.414z" />
+                    </svg>
+                    Back_To_Writeups
+                </a>
+
+               
+
+                <!-- Latest Write-up (Enhanced) -->
+                <div class="card mb-4 latest-writeup">
+                    <div class="card-header">
+                        Web Exploitation
+                    </div>
+                    <div class="card-body">
+                           <!-- Blog Post 1 (Enhanced) -->
+                           <h5 class="card-title">📢Who are you?</h5>
+                           <p class="card-text">Let me in. Let me iiiiiiinnnnnnnnnnnnnnnnnnnn </p>
+                           <mark>http://mercury.picoctf.net:39114/</mark>
+                           <h4>🚨Hint</h4>
+                           <p>
+                            ➡️It ain't much, but it's an RFC.<br>
+                            🏷Request For Comments (RFC) is a series of documents that define the standards ,protocols,procedure and related information used in the development and operation of the internet and it's technology.<br>
+                               In computer Networks there is a RFC model also there just like TCP/IP.<br>
+                               <mark>Example:</mark>RFC 2616 Tells about the HTTP/1.1 protocol and RFC 791, titled "Internet Protocol which outlines the specifications for the Internet Protocol (IP).
+                               </p>
+                               
+                               
+                               <img src="Whomain.png" class="img-thumbnail" alt="...">
+                               <p>🏷Oh!! It show's that this site only takes the request of the client who use's the official PicoBrowser Only or In other words those who requested the server throught the official PicoBrowser Only it takes otherwise it Drops.</p>
+                               <h4>🔗Now I think this challenge totally depends on the Manipulation of Http or Https headers. </h4>
+                               <p>🏷Manipulation of the Request Http header We can use  so many tool's.But now I am using Brup suite.</p>
+                               
+                               <p>🏷So let's find how the server know's the requested user Browser </p>
+                               <p>🏷Here One Http header come's into picture .User-agent http header Tells the client what type of browser is using and that browser from which device he was using and version of 'OS' of the device</p>
+                               <img src="User-agent.png" class="img-thumbnail" alt="..."><br><br><br>
+                               <h4>🛠️Just manipulate the User-agent http header</h4>
+                               <mark>User-agent:PicoBrowser</mark>
+                               <img src="afterUser.png" class="img-thumbnail" alt="...">
+                
+                               <p>🏷Here the Server again not trust and again don't take request from the client who are visiting from the another site  </p>
+
+                               <p>🏷Again same question How the server knows?</p><br>
+                               <p>🏷Here Again one Http Header come's into picture .Http header that tells a server from which site a user is entering is called the referer header. </p>
+                               <h4>🛠️Just manipulate the Referer http header</h4>
+                               <mark>Referer:http://mercury.picoctf.net:39114/</mark>
+                               <img src="referer.png" class="img-thumbnail" alt="...">
+                               <p>🏷Now Again there is a problem like the is only worked at the time 2018 .So the site stops taking request after 2018</p>
+                               <p>🏷So user Date Http header to solve this problem.Most importantly,the Date header acts like a time stamp It contains the data and time at which the message was generated by the Server.</p>
+                               <h4>🛠️Just manipulate the Date http header</h4>
+                               <mark>Date:2018</mark>
+                               <img src="Date.png" class="img-thumbnail" alt="...">
+                               <p>🏷Next Problem is User who are requesting server are not tracked by trageted site or present site.</p>
+                               <p>🏷Now DNT Http header we have to manipulate .Present DNT is not using due some technical issues .</p>
+                               <P>🏷Do Not Track(DNT) request header indicates the user's tracking preference.It let's users indicate whether they would prefer privacy rather than personalized content.</P>
+                               <p>📌DNT:0(indicates ther user prefers to allow tracking on the target site ).</p>
+                               <p>📌DNT:1(indicates the user prefer not to be tracked on the target site).</p>
+                               <p>📌DNT:Null(indicates The user has not specified a preference about tracking).</p>
+                               <h4>🛠️Just manipulate the DNT http header</h4>
+                               <mark>DNT:1</mark>
+                               <img src="DNT.png" class="img-thumbnail" alt="...">
+                               <p>🏷Now The server or site takes the request which are coming from the Sweden country</p>
+                               <p>🏷Now we have to set our location ip of sweden country.For that we have to manipulate or use X-Forwarded-For Http header.</p>
+                               <p>🏷X-Forwarded-For Http header is like a detective's notebook in the world of Http communication.It helps to reveals the true origin of a web request.Even when it has traveled through layers of intermediaries like proxies and load balancers.</p>
+                               <h4>🛠️Just manipulate the X-Forwarded-For http header</h4>
+                               <mark>X-Forwarded-For:31.208.232.100</mark>
+                               <img src="X-For.png" class="img-thumbnail" alt="...">
+                               <p>🏷Now we have to change our Accept language also .Which is nothing but in which language we have to accept the response from the server.</p>
+                               <p>🏷We have to use to Accept-language Http header.Accept-language tells a web server what languages a user prefers to receive content in.</p>
+                               <p>🏷User's browsers automatically set this header based on their preferred language settings.</p>
+                               <p>🏷It can contain a list of languages, prioritzed by preference using "Q" values (higher q= higher perference)</p>
+                               <h4>🛠️Just manipulate the Accept-Language http header</h4>
+                               <mark>Accept-Language: sv-SE</mark>
+                               <img src="Acce.png" class="img-thumbnail" alt="...">
+
+                              
+                               
+   
+                               <h4>Finally  I got the Flag!! 🏆🎉 </h4>
+                               
+                               
+                               <mark>🚩picoCTF{http_h34d3rs_v3ry_c0Ol_much_w0w_20ace0e4}</mark>
+   
+
+                        <hr>
+
+                        <!-- Additional content for Read More -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

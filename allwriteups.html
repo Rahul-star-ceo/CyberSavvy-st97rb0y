@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Write-ups</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('ctbk.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color:whitesmoke;
+            cursor: pointer;
+            margin: 0; /* Remove default margin */
+            padding: 10px; /* Add padding for better readability */
+        }
+
+        h1:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: #d9534f;
+            text-decoration: none; /* Remove underline for links */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Arrange headings side by side */
+        .writeup-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Add spacing between headings */
+        .writeup-container h1 {
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+       
+
+       
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="btn btn-danger home-button mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-house-door" viewBox="0 0 16 16">
+            <path
+                d="M0 0v16h16V0H0zm12 7.154V14H4v-6.846l-.512-.513 7.143-7.142 7.142 7.142-.513.513z" />
+        </svg>
+        Home
+    </a> <br><br><br>
+
+    <div class="container">
+        <div class="writeup-container">
+            <h1 onclick="location.href='writeup1.html';">Write-up 1</h1>
+            <h1 onclick="location.href='writeup2.html';">Write-up 2</h1>
+            <!--  <h1 onclick="location.href='writeup3.html';">Write-up 3</h1> -->
+            <!-- Add more write-ups as needed -->
+        </div>
+    </div>
+
+    <!-- Content for each write-up can go here -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
